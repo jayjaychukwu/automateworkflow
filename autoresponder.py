@@ -1,4 +1,6 @@
-from actions import send_mail
+from actions import Actions
+
+send_mail = Actions.send_mail
 
 
 class AutoResponder:
