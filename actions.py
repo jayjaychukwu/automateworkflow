@@ -1,4 +1,4 @@
-def send_mail(previous_campaign, campaign, email_list):
+def send_mail(previous_campaign, campaign, email_list: list):
     for x in email_list:
         print(
             "email_subject: ",

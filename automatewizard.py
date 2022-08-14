@@ -9,7 +9,20 @@ automationchoice = int(input())
 
 match automationchoice:
     case 1:
-        AutoResponder.Welcome_new_subscribers()
+        print("You have chosen Autoresponder")
+        print("What would you like to do? Choose Below")
+        print("1. Welcome New Subcribers")
+        print("2. Respond to Subscriber changes")
+        print("Type in either '1' or '2'")
+        autoresponder_choice = int(input())
+        match autoresponder_choice:
+            case 1:
+                AutoResponder.Welcome_new_subscribers()
+            case 2:
+                AutoResponder.Respond_to_subscriber_changes()
+            case others:
+                print("Invalid choice! Choose 1 or 2, start again!")
+                exit(0)
     case 2:
         print("Ecom")
     case 3:
