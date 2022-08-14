@@ -24,7 +24,22 @@ match automationchoice:
                 print("Invalid choice! Choose 1 or 2, start again!")
                 exit(0)
     case 2:
-        print("Ecom")
+        print("You have chosen Ecommerce and Marketing")
+        print("What would you like to do? Choose Below")
+        print("1. Thank first-time customers")
+        print("2. Enable order notifications")
+        print("3. Turn on an abadoned cart email")
+        print("4. Retarget site visitors")
+        print("Type in either '1', '2', '3' or '4'")
+        autoresponder_choice = int(input())
+        match autoresponder_choice:
+            case 1:
+                AutoResponder.Welcome_new_subscribers()
+            case 2:
+                AutoResponder.Respond_to_subscriber_changes()
+            case others:
+                print("Invalid choice! Choose 1 or 2, start again!")
+                exit(0)
     case 3:
         print("Blank")
     case others:
