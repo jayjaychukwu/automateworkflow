@@ -1,4 +1,5 @@
 from autoresponder import AutoResponder
+from ecom_marketing import Ecommerce_and_Marketing
 
 print("Hello! Welcome to Automation. Please choose a number from the options below")
 print("1. Autoresponder")
@@ -34,9 +35,13 @@ match automationchoice:
         autoresponder_choice = int(input())
         match autoresponder_choice:
             case 1:
-                AutoResponder.Welcome_new_subscribers()
+                Ecommerce_and_Marketing.Thank_first_time_customers()
             case 2:
-                AutoResponder.Respond_to_subscriber_changes()
+                Ecommerce_and_Marketing.Enable_order_notifications()
+            case 3:
+                Ecommerce_and_Marketing.Turn_on_an_abadoned_cart_email()
+            case 4:
+                Ecommerce_and_Marketing.Retarget_site_visitors()
             case others:
                 print("Invalid choice! Choose 1 or 2, start again!")
                 exit(0)
